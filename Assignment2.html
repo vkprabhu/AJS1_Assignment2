@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<form>
+		Email: <input type="text" name="email" id="email_id" />
+		<input type="button" value="Check!" onclick="validateEmail()" />
+		<p id="result"></p>
+	</form>
+	<script type="text/javascript">
+			var validateEmail = function () {
+				var email = document.getElementById('email_id').value;
+				var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+				alert(emailPattern.test(email));
+			}
+	</script>
+	</body>
+</html>
